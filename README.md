@@ -104,3 +104,8 @@ Contribuições são sempre bem-vindas! Para contribuir:
 ## Contato
 
 Para dúvidas, sugestões ou informações adicionais, entre em contato através do formulário em nossa página de contato.
+
+
+## Features 
+[] - Organizar carrinho
+[] - Atualizar BG na página Nossos Serviços, quando clicado
