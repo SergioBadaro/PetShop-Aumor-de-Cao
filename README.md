@@ -105,7 +105,13 @@ Contribuições são sempre bem-vindas! Para contribuir:
 
 Para dúvidas, sugestões ou informações adicionais, entre em contato através do formulário em nossa página de contato.
 
+## Features 🚧
 
-## Features 
-[] - Organizar carrinho
-[] - Atualizar BG na página Nossos Serviços, quando clicado
+- [ ] Organizar carrinho de compras
+- [ ] Atualizar o background na página "Nossos Serviços" ao clicar em um serviço
+- [ ] Adicionar filtro de produtos por categoria
+- [ ] Implementar busca por produtos
+- [ ] Adicionar avaliações de clientes nos produtos
+- [ ] Criar uma seção de perguntas frequentes (FAQ)
+- [ ] Implementar notificações de promoções
+- [ ] Adicionar integração com redes sociais
