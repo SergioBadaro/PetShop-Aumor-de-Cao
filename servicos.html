@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - AuMor de Cão</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link rel="apple-touch-icon" href="img/logo.jpg">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="AuMor de Cão" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-5">Nossos Serviços</h1>
+
+        <!-- Categorias de Serviços -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="servicosTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#higiene">Higiene e Beleza</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#saude">Saúde</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#lazer">Lazer e Hospedagem</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#especiais">Serviços Especiais</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Categorias -->
+        <div class="tab-content">
+            <!-- Higiene e Beleza -->
+            <div class="tab-pane fade show active" id="higiene">
+                <div class="row">
+                    <!-- Banho e Tosa Básico -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-bath fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Banho e Tosa Básico</h3>
+                                <p class="card-text">Higienização completa do seu pet:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Banho com shampoo especial</li>
+                                    <li><i class="fas fa-check text-success"></i> Secagem e escovação</li>
+                                    <li><i class="fas fa-check text-success"></i> Limpeza de ouvidos</li>
+                                    <li><i class="fas fa-check text-success"></i> Corte de unhas</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 50,00</p>
+                                <button class="btn btn-primary"
+                                    onclick="agendarServico('banho-basico')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banho e Tosa Premium -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="ribbon">Premium</div>
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-cut fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Banho e Tosa Premium</h3>
+                                <p class="card-text">Tratamento VIP para seu pet:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Todos os serviços básicos</li>
+                                    <li><i class="fas fa-check text-success"></i> Hidratação profunda</li>
+                                    <li><i class="fas fa-check text-success"></i> Perfume especial</li>
+                                    <li><i class="fas fa-check text-success"></i> Laço ou gravata</li>
+                                    <li><i class="fas fa-check text-success"></i> Foto pós-tosa</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 80,00</p>
+                                <button class="btn btn-primary"
+                                    onclick="agendarServico('banho-premium')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spa Day -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="ribbon">Novo</div>
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-spa fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Spa Day</h3>
+                                <p class="card-text">Um dia de relaxamento:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Banho relaxante</li>
+                                    <li><i class="fas fa-check text-success"></i> Massagem</li>
+                                    <li><i class="fas fa-check text-success"></i> Aromaterapia</li>
+                                    <li><i class="fas fa-check text-success"></i> Hidratação especial</li>
+                                    <li><i class="fas fa-check text-success"></i> Petiscos naturais</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 120,00</p>
+                                <button class="btn btn-primary" onclick="agendarServico('spa')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saúde -->
+            <div class="tab-pane fade" id="saude">
+                <div class="row">
+                    <!-- Consulta Veterinária -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-stethoscope fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Consulta Veterinária</h3>
+                                <p class="card-text">Atendimento completo:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Exame clínico</li>
+                                    <li><i class="fas fa-check text-success"></i> Vacinação</li>
+                                    <li><i class="fas fa-check text-success"></i> Vermifugação</li>
+                                    <li><i class="fas fa-check text-success"></i> Orientações</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 100,00</p>
+                                <button class="btn btn-primary" onclick="agendarServico('consulta')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exames Laboratoriais -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-microscope fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Exames Laboratoriais</h3>
+                                <p class="card-text">Diagnóstico preciso:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Hemograma</li>
+                                    <li><i class="fas fa-check text-success"></i> Bioquímico</li>
+                                    <li><i class="fas fa-check text-success"></i> Urina</li>
+                                    <li><i class="fas fa-check text-success"></i> Fezes</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 80,00</p>
+                                <button class="btn btn-primary" onclick="agendarServico('exames')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fisioterapia -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="ribbon">Novo</div>
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-hand-holding-heart fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Fisioterapia</h3>
+                                <p class="card-text">Reabilitação especializada:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Avaliação física</li>
+                                    <li><i class="fas fa-check text-success"></i> Hidroterapia</li>
+                                    <li><i class="fas fa-check text-success"></i> Eletroterapia</li>
+                                    <li><i class="fas fa-check text-success"></i> Exercícios</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 90,00</p>
+                                <button class="btn btn-primary"
+                                    onclick="agendarServico('fisioterapia')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lazer e Hospedagem -->
+            <div class="tab-pane fade" id="lazer">
+                <div class="row">
+                    <!-- Creche -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-home fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Creche</h3>
+                                <p class="card-text">Diversão garantida:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Socialização</li>
+                                    <li><i class="fas fa-check text-success"></i> Atividades lúdicas</li>
+                                    <li><i class="fas fa-check text-success"></i> Alimentação</li>
+                                    <li><i class="fas fa-check text-success"></i> Monitoramento</li>
+                                </ul>
+                                <p class="h5 mb-3">R$ 50,00/dia</p>
+                                <button class="btn btn-primary" onclick="agendarServico('creche')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hotel -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-hotel fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Hotel</h3>
+                                <p class="card-text">Hospedagem completa:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Suítes climatizadas</li>
+                                    <li><i class="fas fa-check text-success"></i> Monitoramento 24h</li>
+                                    <li><i class="fas fa-check text-success"></i> Alimentação premium</li>
+                                    <li><i class="fas fa-check text-success"></i> Passeios diários</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 80,00/dia</p>
+                                <button class="btn btn-primary" onclick="agendarServico('hotel')">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adestramento -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-graduation-cap fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Adestramento</h3>
+                                <p class="card-text">Educação personalizada:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Avaliação comportamental</li>
+                                    <li><i class="fas fa-check text-success"></i> Treino individual</li>
+                                    <li><i class="fas fa-check text-success"></i> Socialização</li>
+                                    <li><i class="fas fa-check text-success"></i> Orientação aos tutores</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 100,00/aula</p>
+                                <button class="btn btn-primary"
+                                    onclick="agendarServico('adestramento')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviços Especiais -->
+            <div class="tab-pane fade" id="especiais">
+                <div class="row">
+                    <!-- Festa de Aniversário -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="ribbon">Novo</div>
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-birthday-cake fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Festa de Aniversário</h3>
+                                <p class="card-text">Celebração especial:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Decoração temática</li>
+                                    <li><i class="fas fa-check text-success"></i> Bolo para pets</li>
+                                    <li><i class="fas fa-check text-success"></i> Petiscos especiais</li>
+                                    <li><i class="fas fa-check text-success"></i> Lembrancinhas</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 200,00</p>
+                                <button class="btn btn-primary" onclick="agendarServico('festa')">Reservar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fotografia Pet -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-camera fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Fotografia Pet</h3>
+                                <p class="card-text">Eternize momentos:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Ensaio profissional</li>
+                                    <li><i class="fas fa-check text-success"></i> Cenários temáticos</li>
+                                    <li><i class="fas fa-check text-success"></i> Fotos digitais</li>
+                                    <li><i class="fas fa-check text-success"></i> Álbum impresso</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 150,00</p>
+                                <button class="btn btn-primary" onclick="agendarServico('foto')">Agendar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Taxi Dog -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card servico-card h-100">
+                            <div class="card-body text-center">
+                                <div class="servico-icon">
+                                    <i class="fas fa-car fa-3x mb-3"></i>
+                                </div>
+                                <h3 class="card-title">Taxi Dog</h3>
+                                <p class="card-text">Transporte seguro:</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success"></i> Busca e entrega</li>
+                                    <li><i class="fas fa-check text-success"></i> Veículo adaptado</li>
+                                    <li><i class="fas fa-check text-success"></i> Motorista especializado</li>
+                                    <li><i class="fas fa-check text-success"></i> Monitoramento</li>
+                                </ul>
+                                <p class="h5 mb-3">A partir de R$ 30,00</p>
+                                <button class="btn btn-primary" onclick="agendarServico('taxi')">Solicitar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Agendamento -->
+        <div class="modal fade" id="modalAgendamento" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Agendar Serviço</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formAgendamento">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome do Tutor</label>
+                                <input type="text" class="form-control" id="nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="telefone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pet" class="form-label">Nome do Pet</label>
+                                <input type="text" class="form-control" id="pet" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="especie" class="form-label">Espécie</label>
+                                <select class="form-select" id="especie" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="cachorro">Cachorro</option>
+                                    <option value="gato">Gato</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="data" class="form-label">Data</label>
+                                <input type="date" class="form-control" id="data" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="hora" class="form-label">Horário</label>
+                                <select class="form-select" id="hora" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="observacoes" class="form-label">Observações</label>
+                                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="confirmarAgendamento()">
+                            Confirmar Agendamento
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>AuMor de Cão</h5>
+                    <p>O melhor cuidado para seu pet está aqui!</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Início</a></li>
+                        <li><a href="produtos.html" class="text-light">Produtos</a></li>
+                        <li><a href="servicos.html" class="text-light">Serviços</a></li>
+                        <li><a href="contato.html" class="text-light">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 AuMor de Cão. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ícone do Carrinho -->
+    <a href="carrinho.html" class="carrinho-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="carrinho-contador" id="carrinho-contador">0</span>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/servicos.js"></script>
+</body>
+
+</html>
