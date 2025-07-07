@@ -20,6 +20,8 @@ const filters = {
   ordenacao: "relevancia",
 };
 
+
+
 // Dados dos produtos
 const produtosData = [
   {
@@ -31,6 +33,7 @@ const produtosData = [
     categoria: "racao",
     animal: "cachorro",
     marca: "AuMor Premium",
+
     avaliacao: 4.8,
     estoque: 50,
   },
@@ -50,7 +53,7 @@ const produtosData = [
     id: 3,
     nome: "Cama Pet Confortável",
     preco: 129.9,
-    imagem: "img/produtos/caminha.jpg",
+    imagem: "img/produtos/cama-pet-confo.jpg",
     descricao: "Cama super confortável com material premium.",
     categoria: "camas",
     animal: "cachorro",
@@ -339,7 +342,7 @@ const produtosData = [
     id: 27,
     nome: "Escova de dente para cães",
     preco: 39.9,
-    imagem: "img/produtos/escova-de-dente.jpg",
+    imagem: "img/produtos/escova-dente-pet.jpg",
     categoria: "higiene",
     animal: "cachorro",
     marca: "AuMor Higiene",

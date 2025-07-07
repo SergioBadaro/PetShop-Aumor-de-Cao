@@ -1,5 +1,8 @@
 /* Estilos para a página de produtos */
 
+/* Importação de Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap");
+
 /* Filtros */
 .filtros-card {
   background: var(--white-ice);
@@ -96,6 +99,8 @@
   border-color: var(--primary-color);
 }
 
+
+
 /* Cards de Produto */
 .card {
   border: none;
@@ -151,7 +156,7 @@
   background: var(--primary-color);
   color: var(--text-color);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 1rem;
   border-radius: 20px;
   transition: background-color 0.2s;
   font-weight: 500;

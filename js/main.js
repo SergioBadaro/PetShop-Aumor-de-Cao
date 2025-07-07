@@ -22,7 +22,7 @@ const produtos = [
     id: 3,
     nome: "Cama Pet Confortável",
     preco: 129.9,
-    imagem: "img/produtos/caminha.jpg",
+    imagem: "img/produtos/cama-pet-confo.jpg",
     descricao: "Cama macia e confortável para seu cão descansar em paz.",
     destaque: true,
   },

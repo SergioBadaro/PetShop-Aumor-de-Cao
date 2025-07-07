@@ -162,6 +162,15 @@ h6 {
   bottom: 0;
 }
 
+#title-logo {
+color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  margin: 1rem;
+
+}
+
 @media (max-width: 991px) {
   .navbar-collapse {
     background-color: var(--white-ice);
@@ -834,7 +843,7 @@ img {
   }
 
   .historia-content {
-    padding: 20px;
+    padding: 15px;
   }
 
   .historia-section {
@@ -1374,7 +1383,7 @@ img {
   }
 
   .produto-card .card-img-top {
-    height: 150px;
+    height: 320px;
   }
 
   .carrinho-icon {
@@ -1706,8 +1715,15 @@ img {
 
 .nav-pills .nav-link.active {
   background-color: var(--primary-color);
-  color: white;
-  box-shadow: 0 4px 12px rgba(255, 184, 0, 0.3);
+  color: black;
+  box-shadow: 0 4px 12px rgba(231, 6, 6, 0.3);
+}
+
+.text-center .mb-5 {
+color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .servico-card {
