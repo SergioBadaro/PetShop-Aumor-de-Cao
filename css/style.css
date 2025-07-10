@@ -1847,3 +1847,24 @@ img {
     font-size: 1rem;
   }
 }
+
+.facebook i,  #face{
+  color: #1877F2;
+  font-size: 2.5rem;
+}
+
+.instagram i, #insta{
+  color: #E1306C;
+  font-size: 2.5rem;
+}
+
+.whatsapp i, #whats{
+  color: #25D366;
+  font-size: 2.5rem;
+}
+
+#face,
+#insta,
+#whats {
+  font-size: 2rem;
+}
