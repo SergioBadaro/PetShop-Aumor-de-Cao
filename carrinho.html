@@ -18,6 +18,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/carrinho.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
                         <a class="nav-link" href="contato.html">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a> <!-- Link para a página de FAQ -->
+                        <a class="nav-link" href="faq.html">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -91,6 +92,11 @@
                                 <strong>Total:</strong>
                                 <strong id="total">R$ 0,00</strong>
                             </div>
+
+                            <p id="aviso-frete" class="text-center mt-2"></p>
+
+
+
 
                             <!-- Opções de Pagamento -->
                             <div class="metodos-pagamento mb-3">
@@ -165,7 +171,7 @@
                     <!-- QR Code PIX -->
                     <div id="formPix" class="forma-pagamento d-none text-center">
                         <div class="qr-code-container mb-3">
-                            <img src="img/qr-code-exemplo.png" alt="QR Code PIX" class="img-fluid"
+                            <img src="img/pagamento-qr-code.jpg" alt="QR Code PIX" class="img-fluid"
                                 style="max-width: 200px;">
                         </div>
                         <p class="mb-2">Escaneie o QR Code para pagar</p>

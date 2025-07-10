@@ -99,13 +99,34 @@ function atualizarResumo() {
     return total + item.preco * item.quantidade;
   }, 0);
 
-  const frete = carrinho.length > 0 ? 15 : 0;
+  let frete = 0;
+if (subtotal >= 100) {
+  frete = 0;
+} else if (carrinho.length > 0) {
+  frete = 15.99;
+}
   const total = subtotal + frete;
 
   document.getElementById("subtotal").textContent = `R$ ${subtotal.toFixed(2)}`;
   document.getElementById("frete").textContent = `R$ ${frete.toFixed(2)}`;
   document.getElementById("total").textContent = `R$ ${total.toFixed(2)}`;
 }
+
+const avisoFrete = document.getElementById("aviso-frete");
+if (avisoFrete) {
+  if (subtotal >= 100) {
+    avisoFrete.textContent = "🎉 Parabéns! Você ganhou FRETE GRÁTIS!";
+    avisoFrete.style.color = "green";
+  } else if (subtotal > 0) {
+    const falta = (100 - subtotal).toFixed(2);
+    avisoFrete.textContent = `🛒 Faltam R$ ${falta} para ganhar frete grátis.`;
+    avisoFrete.style.color = "orange";
+  } else {
+    avisoFrete.textContent = "🚚 Produtos acima de R$ 100,00 ganham frete grátis!";
+    avisoFrete.style.color = "#555";
+  }
+}
+
 
 // Função para configurar as opções de pagamento
 function configurarPagamento() {
@@ -115,6 +136,8 @@ function configurarPagamento() {
       atualizarFormaPagamento(metodo.value);
     });
   });
+
+
 
   // Configurar máscaras de input
   const numeroCartao = document.querySelector(

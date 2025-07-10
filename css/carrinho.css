@@ -1,0 +1,31 @@
+/* Importação de Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap");
+
+
+h2.mb-4 {
+  color: var(--primary-color);  
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: green;
+  margin-top: 20px;}
+
+  #aviso-frete {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.frete-promocional {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #007bff;
+}
+
+#aviso-frete {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
