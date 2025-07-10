@@ -103,7 +103,7 @@ h6 {
 
 .nav-link.active {
   color: var(--primary-color) !important;
-  background-color: rgba(255, 184, 0, 0.1);
+  background-color: rgba(246, 161, 4, 0.1);
 }
 
 .nav-link.active::after {
@@ -454,6 +454,8 @@ section {
 
 section h2 {
   color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 40px;
   position: relative;
 }
@@ -1698,155 +1700,6 @@ img {
   }
 }
 
-/* Estilos para a página de Serviços */
-.nav-pills .nav-link {
-  color: var(--text-color);
-  border-radius: 50px;
-  padding: 10px 25px;
-  margin: 0 5px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: rgba(255, 184, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.nav-pills .nav-link.active {
-  background-color: var(--primary-color);
-  color: black;
-  box-shadow: 0 4px 12px rgba(231, 6, 6, 0.3);
-}
-
-.text-center .mb-5 {
-color: var(--primary-color);
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.servico-card {
-  border: none;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  position: relative;
-}
-
-.servico-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.servico-icon {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 184, 0, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  transition: all 0.3s ease;
-}
-
-.servico-card:hover .servico-icon {
-  background: var(--primary-color);
-  transform: scale(1.1) rotate(5deg);
-}
-
-.servico-icon i {
-  color: var(--primary-color);
-  transition: all 0.3s ease;
-}
-
-.servico-card:hover .servico-icon i {
-  color: white;
-}
-
-.ribbon {
-  position: absolute;
-  top: 20px;
-  right: -30px;
-  transform: rotate(45deg);
-  background: var(--primary-color);
-  color: white;
-  padding: 5px 40px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.servico-card .list-unstyled {
-  margin: 20px 0;
-  text-align: left;
-  padding-left: 20px;
-}
-
-.servico-card .list-unstyled li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.servico-card .list-unstyled li i {
-  margin-right: 10px;
-  font-size: 0.8rem;
-}
-
-.servico-card .btn {
-  transform: translateY(0);
-  transition: all 0.3s ease;
-}
-
-.servico-card:hover .btn {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 184, 0, 0.3);
-}
-
-.tab-content {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.tab-pane {
-  transition: all 0.3s ease;
-}
-
-.tab-pane.fade {
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-.tab-pane.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .nav-pills {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
-
-  .nav-pills .nav-link {
-    white-space: nowrap;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-
-  .servico-card {
-    margin-bottom: 20px;
-  }
-
-  .ribbon {
-    font-size: 0.7rem;
-    padding: 3px 30px;
-  }
-}
 
 /* Estilos para os Slides de Mensagens e Notícias */
 .mensagens-container {

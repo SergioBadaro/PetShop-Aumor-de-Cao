@@ -1,0 +1,84 @@
+/* Importação de Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap");
+
+
+
+
+.container.mt-5.pt-5 h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.row .col-md-4 .card .card-body h3 {
+  color: var(--primary-color);      
+  font-size: 1.8rem;
+  font-weight: bold;
+
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+label {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+
+/* Estilo para o campo Nome */
+#nome {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+}
+/* Estilo para o campo Email */
+#email {
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Estilo para o campo Assunto (select) */
+#assunto {
+
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fffbe7;
+}
+
+/* Estilo para o campo Mensagem (textarea) */
+#mensagem {
+  
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: #f9f9f9;
+}
+
+.facebook i {
+  color: #1877F2;
+  font-size: 2.5rem;
+}
+
+.instagram i {
+  color: #E1306C;
+  font-size: 2.5rem;
+}
+
+.whatsapp i {
+  color: #25D366;
+  font-size: 2.5rem;
+}
+
+#face,
+#insta,
+#whats {
+  font-size: 3rem;
+}
