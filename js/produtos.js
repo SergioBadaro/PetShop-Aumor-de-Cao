@@ -866,3 +866,69 @@ function toggleView(view) {
   // Re-renderiza os produtos para atualizar o layout
   renderizarProdutos();
 }
+
+function renderizarProdutos() {
+  const container = document.getElementById("produtos-grid");
+  const inicio = (currentPage - 1) * ITEMS_PER_PAGE;
+  const fim = inicio + ITEMS_PER_PAGE;
+  const produtosPagina = produtosFiltrados.slice(inicio, fim);
+
+  if (produtosPagina.length === 0) {
+    container.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+        <p class="text-muted">Nenhum produto encontrado</p>
+      </div>
+    `;
+    return;
+  }
+
+  let html = "";
+  produtosPagina.forEach((produto) => {
+    // Função para criar estrelas com base na avaliação
+    function gerarEstrelas(avaliacao) {
+      const maxEstrelas = 5;
+      let estrelasHTML = "";
+      const inteiros = Math.floor(avaliacao);
+      const temMeia = avaliacao - inteiros >= 0.5;
+
+      for (let i = 0; i < inteiros; i++) {
+        estrelasHTML += `<i class="fas fa-star text-warning"></i>`;
+      }
+      if (temMeia) {
+        estrelasHTML += `<i class="fas fa-star-half-alt text-warning"></i>`;
+      }
+      const restantes = maxEstrelas - inteiros - (temMeia ? 1 : 0);
+      for (let i = 0; i < restantes; i++) {
+        estrelasHTML += `<i class="far fa-star text-warning"></i>`;
+      }
+      return estrelasHTML;
+    }
+
+    html += `
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="card produto-card h-100 shadow-sm">
+          <div class="card-img-container position-relative">
+            <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}" loading="lazy" style="object-fit:cover; height:300px;">
+            <span class="badge bg-success position-absolute top-0 end-0 m-2">Estoque: ${produto.estoque}</span>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${produto.nome}</h5>
+            <small class="text-muted mb-1">Marca: ${produto.marca}</small>
+            <p class="card-text flex-grow-1 text-truncate" style="min-height: 60px;">${produto.descricao}</p>
+            <div class="mb-2">${gerarEstrelas(produto.avaliacao)} <small class="text-muted ms-1">(${produto.avaliacao.toFixed(1)})</small></div>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="produto-preco fs-5 fw-bold text-primary">R$ ${produto.preco.toFixed(2)}</span>
+              <button class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho(${produto.id})" aria-label="Adicionar ${produto.nome} ao carrinho">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+  atualizarPaginacao();
+}

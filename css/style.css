@@ -190,6 +190,30 @@ color: var(--primary-color);
   }
 }
 
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 50px;
+  }
+
+  .navbar-brand span {
+    font-size: 1.2rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  #title-logo {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+}
+
 /* Hero Section com Banner */
 .hero-section {
   position: relative;
@@ -423,14 +447,11 @@ color: var(--primary-color);
   font-style: italic;
 }
 
-/* Cards */
 .card {
   border: none;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  overflow: hidden;
   background-color: var(--white-ice);
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -446,6 +467,7 @@ color: var(--primary-color);
   flex-direction: column;
   flex: 1;
 }
+
 
 /* Seções */
 section {
@@ -527,11 +549,46 @@ section h2::after {
   margin: 0.75rem 0;
 }
 
+
 @media (max-width: 768px) {
-  .produto-card .card-img-top {
-    height: 220px;
+  #produtos-container .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #produtos-container .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #produtos-container .produto-img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  #produtos-container .card-title {
+    font-size: 1.1rem;
+  }
+
+  #produtos-container .card-text {
+    font-size: 0.95rem;
+  }
+
+  #produtos-container .card-price {
+    font-size: 1rem;
+  }
+
+  #produtos-container .card-button {
+    font-size: 0.5rem;
+    padding: 10px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 }
+
 
 /* Carrinho */
 .carrinho-icon {
@@ -1867,4 +1924,35 @@ img {
 #insta,
 #whats {
   font-size: 2rem;
+}
+
+@media (max-width: 620px) {
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+
+  footer ul {
+    padding: 0;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
 }
