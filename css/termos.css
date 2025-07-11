@@ -1,0 +1,48 @@
+
+/* Importação de Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap");
+
+/* Reset básico */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+
+
+/* Estilo das listas dentro dos cards */
+.card-body ul {
+  list-style: none; /* remove os bullets padrão */
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.card-body ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Bullet estilizado com ícone Font Awesome */
+.card-body ul li::before {
+  content: "\f058"; /* ícone check-circle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: green;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1rem;
+}
+
+/* Hover opcional para destacar item */
+.card-body ul li:hover {
+  color: var(--primary-color);
+}

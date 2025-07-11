@@ -1,0 +1,206 @@
+/* Importação de Fontes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap");
+
+/* Reset básico */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+/* Navbar */
+.navbar-brand img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#title-logo {
+  display: inline;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+    
+}
+
+/* Cabeçalho da página */
+h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-body h2 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+/* Estilo geral das listas */
+.card-body ul {
+  list-style: none; /* remove os bullets padrão */
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.card-body ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Bullet customizado com ícone */
+.card-body ul li::before {
+  content: "\f058"; /* ícone check-circle do Font Awesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: green;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1rem;
+}
+
+/* Efeito ao passar o mouse (opcional) */
+.card-body ul li:hover {
+  color: var(--primary-color);
+}
+
+#email-priv {
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Rodapé */
+.facebook i,  #face{
+  color: #1877F2;
+  font-size: 2.5rem;
+}
+
+.instagram i, #insta{
+  color: #E1306C;
+  font-size: 2.5rem;
+}
+
+.whatsapp i, #whats{
+  color: #25D366;
+  font-size: 2.5rem;
+}
+
+#face,
+#insta,
+#whats {
+  font-size: 2rem;
+}
+
+@media (max-width: 620px) {
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+
+  footer ul {
+    padding: 0;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Ícone do carrinho */
+.carrinho-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1e90ff;
+  color: white;
+  padding: 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.carrinho-icon:hover {
+  background-color: #1572c8;
+}
+
+.carrinho-contador {
+  background-color: #ff6347;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  #title-logo {
+    font-size: 1.2rem;
+  }
+
+  .carrinho-icon {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
